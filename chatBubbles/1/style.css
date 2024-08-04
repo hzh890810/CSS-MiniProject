@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    width: 100%;
+    height: 100vh;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #1b1b1b;
+}
+.chat-box{
+    width: 45%;
+    min-height: 100vh;
+    background-color: #fff;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0.66rem;
+}
+@keyframes ani{
+    0%{ 
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+.chat-box .chat-bubble{
+    width: 100%;
+    padding: 0.33rem;
+    animation: ani 1.3s linear;
+}
+.chat-box .chat-bubble span{
+    padding: 0.66rem 1.66rem;
+    border-radius: 2rem;
+}
+.chat-box .chat-bubble.self span{
+    float: right;
+    position: relative;
+    background-color: #4af;
+    color: #fff;
+}
+.chat-box .chat-bubble.self span::before{
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    background-color: inherit;
+    transform: translate(-50%,-10%);
+    border-bottom-left-radius: 1rem;
+}
+.chat-box .chat-bubble.self span::after{
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    background-color: inherit;
+    transform: translate(0%,-10%);
+    border-bottom-left-radius: 1rem;
+    background-color: #fff;
+}
+.chat-box .chat-bubble.other span{
+    float: left;
+    position: relative;
+    background-color: #aaa;
+    color: #000;
+}
+.chat-box .chat-bubble.other span::before{
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    background-color: inherit;
+    transform: translate(-50%,-10%);
+    border-bottom-right-radius: 1rem;
+}
+.chat-box .chat-bubble.other span::after{
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    background-color: inherit;
+    transform: translate(-100%,-10%);
+    border-bottom-right-radius: 1rem;
+    background-color: #fff;
+}

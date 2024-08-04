@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    width: 100%;
+    height: 100vh;
+}
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    width: 13rem;
+    height: 13rem;
+    position: relative;
+    transition: .6s linear;
+}
+.card{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) skew(-30deg) rotate(10deg);
+    /* overflow: hidden; */
+    transition: .6s linear;
+    padding: 0.33rem;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    box-shadow:7px 7px 10px 0 #333;
+}
+.card:nth-child(2){
+    transform: translate(-50%,-60%) skew(-30deg) rotate(10deg)
+}
+.card:nth-child(3){
+    transform: translate(-50%,-70%) skew(-30deg) rotate(10deg)
+}
+.wrapper:hover{
+    height: 19rem;
+}
+.wrapper:hover .card:nth-child(1){
+    transform: translate(35%,-45%) rotate(10deg)
+}
+.wrapper:hover .card:nth-child(2){
+    transform: translate(-50%,-50%)
+}
+.wrapper:hover .card:nth-child(3){
+    transform: translate(-135%,-45%) rotate(-10deg)
+}

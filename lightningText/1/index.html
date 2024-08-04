@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <title> Lightning Text #1</title>
+</head>
+<body>
+    <div class="text">3</div>
+    <div class="text">0</div>
+    <div class="text">d</div>
+    <div class="text">a</div>
+    <div class="text">y</div>
+    <div class="text">C</div>
+    <div class="text">S</div>
+    <div class="text">S</div>
+    <div class="text bi bi-heart"></div>
+    <script>
+        eles = document.querySelectorAll(".text")
+        eles.forEach((ele,ind) => {
+            ele.style.animationDelay  = `${0.6*ind}s`
+        });
+    </script>
+</body>
+</html>

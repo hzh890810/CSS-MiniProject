@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Chat Bubbles #1</title>
+</head>
+<body>
+    <div class="chat-box" id="app">
+        <div class="chat-bubble" v-for="msg in msgs" :class="[msg.sender]">
+            <span>{{msg.text}}</span>
+        </div>
+    </div>
+    <script>
+    const { createApp } = Vue
+
+    createApp({
+    data() {
+        return {
+        msgs: [
+            {
+                text:"Hell world",
+                sender:"self"
+            },
+            {
+                text:"你好",
+                sender:"other"
+            }
+        ]
+        }
+    }
+    }).mount('#app')
+    </script>
+</body>
+</html>

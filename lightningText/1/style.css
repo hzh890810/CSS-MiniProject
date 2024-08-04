@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    width: 100%;
+    height: 100vh;
+}
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b1b1b;
+}
+.text{
+    font-size: 6rem;
+    font-weight: 700;
+    margin: 0 1.33rem;
+    animation: shine .6s linear;
+    color: #333;
+}
+@keyframes shine{
+    0%{
+    }
+    50%{
+        color: #fa0;
+        text-shadow: 0 0 5rem #fa0;
+    }
+    100%{
+        color: #333;
+    }
+}

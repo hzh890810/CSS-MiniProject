@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    width: 100%;
+    height: 100vh;
+}
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+}
+.wrapper .item{
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform: rotate(-30deg) skew(25deg);
+    cursor: pointer;
+}
+.wrapper .item span{
+    width: 100%;
+    height: 100%;
+    font-size: 3rem;
+    padding: 1.88rem;
+    color: #fff;
+    border-radius: 1.3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: none;
+    transition: .3s;
+}
+.wrapper .item span:nth-child(1){
+    z-index: 1;
+}
+.wrapper .item:hover span{
+    box-shadow: -1px 1px 10px #555
+}
+.wrapper .item:hover span:nth-child(1){
+    transform: translate(100%,-100%);
+    opacity: 1;
+}
+.wrapper .item:hover span:nth-child(2){
+    transform: translate(80%,-80%);
+    opacity: .8;
+}
+.wrapper .item:hover span:nth-child(3){
+    transform: translate(60%,-60%);
+    opacity: .6;
+}
+.wrapper .item:hover span:nth-child(4){
+    transform: translate(40%,-40%);
+    opacity: .4;
+}
+.wrapper .item:hover span:nth-child(5){
+    transform: translate(20%,-20%);
+    opacity: .2;
+}
+.wrapper .item.twitch span{
+    background-color: #7713f9;
+}
+.wrapper .item.twitter span{
+    background-color: aqua;
+}
+.wrapper .item.line span{
+    background-color: rgb(0, 220, 0);
+}
+.wrapper .item.instagram span{
+    background-image: linear-gradient(to top, #FED975 , #FA7F1E, #D72976, #9630BE, #4F5CD5);
+}
